@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <link rel="icon" href="faveicon.png" type="image/x-icon">
+  <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" /><link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+crossorigin="anonymous"
+referrerpolicy="no-referrer"
+/>
+  <title>Pokedex</title>
+    <link rel="stylesheet" href="pokemon.css" />
+    <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css"> <!-- Adicione o seu arquivo CSS aqui -->
+</head>
+<body>
+    <title>Tela de login</title>  
+  </head>
+  <body>
+    <div class="header">
+      <div id="logo">
+        <img src="poke-logo.png" alt="Logo da Pokedex">
+      </div>
+      <div id="search-bar">
+        <input type="text" id="search-input" placeholder="Procure o seu Pokémon..." class="searchbar">
+      </div>
+      <div id="login-button" onclick="abrirPopupLogin()">
+        <i class="fa-solid fa-arrow-right-to-bracket fa-2xl" style="color: #ffffff;"></i>
+      </div>
+      <link rel="icon" href="faveicon.png" type="image/x-icon">
+    </div>
+  
+    <script>
+  // Crie uma função para criar os botões
+function createButton(text, clickHandler) {
+  const button = document.createElement('button');
+  button.textContent = text;
+  button.addEventListener('click', clickHandler);
+  button.classList.add('popup-button'); // Adicione a classe compartilhada
+  return button;
+}
+
+function abrirPopupLogin() {
+  const popup = document.createElement('div');
+  popup.id = 'popup-login'; // Adicionei um ID para facilitar a referência
+  popup.innerHTML = `
+    <h1>PokeLogin</h1>
+    <input type="text" placeholder="Nome">
+    <br><br>
+    <input type="password" placeholder="Senha">
+    <br><br>
+    <button onclick="fecharPopup()">Entrar</button>
+    <button onclick="fecharPopup()">Cadastrar-se</button>
+  `;
+
+  // Estilizar o popup
+  popup.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+  popup.style.position = 'fixed';
+  popup.style.top = '50%';
+  popup.style.left = '50%';
+  popup.style.transform = 'translate(-50%, -50%)';
+  popup.style.padding = '70px';
+  popup.style.borderRadius = '20px';
+  popup.style.color = '#fff';
+
+  // Aplicar estilos aos elementos internos
+  const inputs = popup.querySelectorAll('input');
+  const buttons = popup.querySelectorAll('button'); // Corrigido para selecionar todos os botões
+
+  inputs.forEach(input => {
+    input.style.padding = '22.5px';
+    input.style.border = 'none';
+    input.style.outline = 'none';
+    input.style.fontSize = '22.5px';
+  });
+
+  buttons.forEach(button => { // Alterado para iterar sobre todos os botões
+    button.style.backgroundColor = '#b81414';
+    button.style.border = 'none';
+    button.style.padding = '15px';
+    button.style.width = '100%';
+    button.style.borderRadius = '25px';
+    button.style.color = 'white';
+    button.style.fontSize = '15px';
+    button.style.marginBottom = '20.5px';
+    button.addEventListener('mouseover', () => {
+      button.style.backgroundColor = 'red';
+      button.style.cursor = 'pointer';
+    });
+
+    button.addEventListener('mouseout', () => {
+      button.style.backgroundColor = '#b81414';
+    });
+  });
+
+  // Adicionar o popup ao corpo do documento
+  document.body.appendChild(popup);
+}
+
+function fecharPopup() {
+  // Remover o popup ao clicar no botão de fechar
+  const popup = document.querySelector('#popup-login');
+  if (popup) {
+    document.body.removeChild(popup);
+  }
+}
+
+    </script>
+  </body>
+  
+
+  
+  <div>
+    <div>
+       <div class="sidebar"> 
+          <h2>Tipos de Pokemon</h2>
+        </div>
+          <ul>
+          
+          <div class="filter__type-wrapper">
+           
+            <div class="filter__type is--normal" onclick="filtrarPokemon('normal')">Normal</div>
+            <div class="filter__type is--flying" onclick="filtrarPokemon('flying')">Flying</div>
+            <div class="filter__type is--grass" onclick="filtrarPokemon('grass')">Grass</div>
+            <div class="filter__type is--fire" onclick="filtrarPokemon('fire')">Fire</div>
+            <div class="filter__type is--water" onclick="filtrarPokemon('water')">Water</div>
+            <div class="filter__type is--bug" onclick="filtrarPokemon('bug')">Bug</div>
+            <div class="filter__type is--electric" onclick="filtrarPokemon('electric')">Electric</div>
+            <div class="filter__type is--rock" onclick="filtrarPokemon('rock')">Rock</div>
+            <div class="filter__type is--ghost" onclick="filtrarPokemon('ghost')">Ghost</div>
+            <div class="filter__type is--poison" onclick="filtrarPokemon('poison')">Poison</div>
+            <div class="filter__type is--psychic" onclick="filtrarPokemon('psychic')">Psychic</div>
+            <div class="filter__type is--fighting" onclick="filtrarPokemon('fighting')">Fighting</div>
+            <div class="filter__type is--ground" onclick="filtrarPokemon('ground')">Ground</div>
+            <div class="filter__type is--dragon" onclick="filtrarPokemon('dragon')">Dragon</div>
+            <div class="filter__type is--fairy" onclick="filtrarPokemon('fairy')">fairy</div>
+            <div class="filter__type is--dark" onclick="filtrarPokemon('dark')">dark</div>
+            <div class="filter__type is--steel" onclick="filtrarPokemon('steel')">steel</div>
+            <div class="filter__type is--ice" onclick="filtrarPokemon('ice')">ice</div>            
+            <div id="btnClear" class="filter__type is--clear" onclick="limparFiltro()">Reset</div>
+          </div>
+        </ul>
+    </div>
+  
+    <div class="container">
+        <ul id="pokedex"></ul>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>

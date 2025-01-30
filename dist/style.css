@@ -1,0 +1,417 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background: #ef5350;
+    color: #ef5350;
+    font-size: 10px;
+  }
+  
+  #logo img {
+    width: auto;
+    height: 60.5px;
+    margin-right: 20px;
+  }
+  
+  
+  #search-bar {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Adicionado para centralizar a barra de pesquisa */
+    margin-right: auto; /* Adicionado para centralizar a barra de pesquisa */
+  }
+  
+  .searchbar {
+    height: 45px;
+    border-radius: 16px;
+    width: 700px;
+    font-size: 16px;
+    outline: none;
+    margin-left: -70px;
+}
+  
+
+  
+
+  
+  body {
+      background-color: #A6A6A6;
+      color: white;
+      margin: 0;
+      font-family: rubik;
+  }
+  
+  .container {
+      padding: 40px;
+      margin: 0 auto;
+  }
+  
+  h1 {
+      text-transform: uppercase;
+      text-align: center;
+      font-size: 54px;
+  }
+  
+  #pokedex {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      grid-gap: 20px;
+      padding-inline-start: 0;
+  }
+  
+  .card {
+      list-style: none;
+      padding: 40px;
+      background-color: #f4f4f4;
+      color: #222;
+     text-align: center;
+     cursor: pointer;
+   
+}
+  #BotaoFechar {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 70px;
+    width:50px; 
+    font-family: 'VT323', monospace; /* Aplicando a fonte VT323 */
+    cursor: pointer;
+    
+}
+
+
+#BotaoFechar:hover {
+    color: #ccc; /* Altere para a cor desejada ao passar o mouse */
+}
+
+  .card:hover {
+      animation: bounce 0.5s linear;
+  }
+  
+  .card-title {
+      text-transform: capitalize;
+      margin-bottom: 0px;
+      font-size: 32px;
+      font-weight: normal;
+  }
+ 
+ /*area dos tipos de pokemon dentro do card*/
+  .card-subtitle {
+    margin-top: 5px;
+    color: #666;
+    font-weight: lighter;
+}
+
+.card-subtitle span {
+    margin-right: 5px; 
+}
+
+.card-subtitle .is--normal{
+    color: #aca974;
+    font-family: 'VT323', monospace;
+    font-size: 1.4em;
+}
+
+.card-subtitle .is--grass {
+    color: #47ab57;
+    font-family: 'VT323', monospace;
+    font-size: 1.4em;
+
+}
+
+.card-subtitle .is--fire {
+    color: #fd7d24;
+    font-family: 'VT323', monospace;
+    font-size: 1.4em;
+}
+.card-subtitle .is--water {
+    color: #4592c4;
+    font-family: 'VT323', monospace;
+    font-size: 1.4em;
+}
+
+.card-subtitle .is--bug {
+    color: #719f3f;
+    font-family: 'VT323', monospace;
+    font-size: 1.4em;
+}
+
+.card-subtitle .is--electric {
+    color: #eed535;
+    font-family: 'VT323', monospace;
+    font-size: 1.4em;
+}
+
+.card-subtitle .is--rock {
+    color: #a38c21;
+    font-family: 'VT323', monospace;
+    font-size: 1.4em;
+}
+
+.card-subtitle .is--ghost {
+    color: #7b62a3;
+    font-family: 'VT323', monospace;
+    font-size: 1.4em;
+}
+
+.card-subtitle .is--poison {
+    color: #b97fc9;
+    font-family: 'VT323', monospace;
+    font-size: 1.4em;
+}
+
+.card-subtitle .is--psychic {
+    color: #f366b9;
+    font-family: 'VT323', monospace;
+    font-size: 1.4em;
+}
+
+.card-subtitle .is--fighting {
+    color: #d56723;
+    font-family: 'VT323', monospace;
+    font-size: 1.4em;
+}
+
+.card-subtitle .is--ground {
+    color: #ab9842;
+    font-family: 'VT323', monospace;
+    font-size: 1.4em;
+}
+
+.card-subtitle .is--dragon {
+    color: #f06d56;
+    font-family: 'VT323', monospace;
+    font-size: 1.4em;
+}
+
+.card-subtitle .is--fairy {
+    color: #f87ea7;
+    font-family: 'VT323', monospace;
+    font-size: 1.4em;
+}
+
+.card-subtitle .is--dark { 
+    color: #705746 ;
+    font-family: 'VT323', monospace;
+    font-size: 1.4em;
+
+}
+
+.card-subtitle .is--steel { 
+    color:#B7B7CE;
+    font-family:'VT323', monospace;
+    font-size: 1.4em; 
+}
+
+.card-subtitle .is--ice{ 
+    color:#96D9D6; 
+    font-family:'VT323', monospace;
+    font-size: 1.4em; 
+} 
+
+.card-subtitle .is--flying{ 
+    color: #A98FF3;
+    font-family:'VT323', monospace;
+    font-size: 1.4em; 
+
+}
+  .card-image {
+      height: 180px;
+  }
+  
+  @keyframes bounce {
+      20% {
+          transform: translateY(-6px);
+      }
+      40% {
+          transform: translateY(0px);
+      }
+  
+      80% {
+          transform: translateY(-2px);
+      }
+      100% {
+          transform: translateY(0);
+      }
+  } 
+
+  .sidebar{
+  margin-left: 50px;
+  font-family: 'VT323', monospace; 
+  font-size: 1.6em; 
+ }
+
+
+  .filter__type {
+    padding: 10px;
+    justify-content: center;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.6em;
+    margin-right: 10px;
+    display: inline-block;
+    margin-bottom: 10px;
+    background-color: #fff;
+    font-family: 'VT323', monospace; /* Definindo a fonte VT323 para os tipos de filtro */
+    transition: transform 0.3s ease-in-out; /* Adicionando transição para suavizar a mudança */
+}
+
+.filter__type:hover {
+    animation: bounce 0.5s linear;
+}
+
+@keyframes bounce {
+    20% {
+        transform: translateY(-6px);
+    }
+    40% {
+        transform: translateY(0px);
+    }
+    80% {
+        transform: translateY(-2px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+  
+  
+  
+  
+  
+  .popup{ 
+    position: fixed; 
+    top: 20%; 
+    left: 0; 
+    height: 100vh; 
+    width: 100vw; 
+  } 
+  
+  
+  
+  
+  .filter__type {
+    padding: 10px;
+    justify-content: center;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.6em;
+    margin-right: 10px;
+    display: inline-block;
+    margin-bottom: 10px;
+    background-color: #fff;
+    font-family: 'VT323', monospace; /* Definindo a fonte VT323 para os tipos de filtro */
+  }
+  
+    /*tipos de pokemon dentro do filtro*/   
+  .filter__type.is--clear {
+      background-color: #fff;
+      display: inline-block;
+      margin-bottom: 10px;
+      color: #222; /* Mudando a cor do texto para a cor de fundo original */
+  }
+  /* um filter type vazia ajudou a evitar erros */
+  .filter__type.is--nada {
+      background-color: #463b95;
+  }
+  .filter__type.is--normal {
+      background-color: #fff; /* Defina a cor de fundo para a cor de texto original */
+      color: #aca974; /* Mantendo a cor do texto branca */
+      
+  }
+  .filter__type.is--flying{ 
+    background-color: #fff;
+    color: #A98FF3;
+  }
+
+  .filter__type.is--grass {
+      background-color: #fff;
+      color: #47ab57;
+  }
+  
+  .filter__type.is--fire {
+      background-color: #fff;
+      color: #fd7d24;
+  }
+  
+  .filter__type.is--water {
+      background-color: #fff;
+      color: #4592c4;
+  }
+  
+  .filter__type.is--bug {
+      background-color: #fff;
+      color: #719f3f;
+  }
+  
+  .filter__type.is--electric {
+      background-color: #fff;
+      color: #eed535;
+  }
+  
+  .filter__type.is--rock {
+      background-color: #fff;
+      color: #a38c21;
+  }
+  
+  .filter__type.is--ghost {
+      background-color: #fff;
+      color: #7b62a3;
+  }
+  
+  .filter__type.is--poison {
+      background-color: #fff;
+      color: #b97fc9;
+  }
+  
+  .filter__type.is--psychic {
+      background-color: #fff;
+      color: #f366b9;
+  }
+  
+  .filter__type.is--fighting {
+      background-color: #fff;
+      color: #d56723;
+  }
+  
+  .filter__type.is--ground {
+      background-color: #fff;
+      color: #ab9842;
+  }
+  
+  .filter__type.is--dragon {
+      background-color: #fff;
+      color: #f06d56;
+  }
+  .filter__type.is--dark { 
+    background-color: #fff;
+    color: #705746; 
+  }
+  
+  .filter__type.is--fairy {
+      background-color: #fff;
+      color: #f87ea7;
+  }
+  .filter__type.is--steel {
+    background-color: #fff;
+    color:#B7B7CE
+  }
+
+  .filter__type.is--ice{
+    background-color: #fff;
+    color:#96D9D6; 
+
+  } 
+
+
+
+  /*css do login
+
+  
